@@ -23,7 +23,7 @@ public class InventoryController {
 
     @GetMapping("inventory/venue/{venuId}")
     public ResponseEntity<VenuDTO> inventoryByVenueId(@PathVariable Long venuId) {
-        return inventoryService.getVenueInformation(venuId);
+        return ResponseEntity.ok(inventoryService.getVenueInformation(venuId));
     }
 
 }
