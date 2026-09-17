@@ -1,2 +1,19 @@
 services:
-  
+  mysql:
+    image: mysql:0.3.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: ticketing
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db-data:/var/lib/mysql
+      - db-data:/var/log/mysql
+
+volumes:
+  db-data:
