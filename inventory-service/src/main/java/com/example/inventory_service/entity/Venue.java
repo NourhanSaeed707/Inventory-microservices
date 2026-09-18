@@ -8,7 +8,8 @@ import java.util.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Venu {
+@ToString(exclude = "events")
+public class Venue {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -17,6 +18,6 @@ public class Venu {
     @Column(name = "total_capacity")
     private Long totalCapacity;
 
-    @OneToMany
+    @OneToMany(mappedBy = "venue")
     List<Event> events;
 }

@@ -1,19 +1,19 @@
 package com.example.inventory_service.service.mapper;
 import com.example.inventory_service.dto.VenuDTO;
-import com.example.inventory_service.entity.Venu;
+import com.example.inventory_service.entity.Venue;
 import org.springframework.stereotype.Service;
 
 @Service
 public class VenuMapper {
 
-    public Venu toVenuDTO(VenuDTO venuDTO) {
-        return Venu.builder()
+    public Venue toVenuDTO(VenuDTO venuDTO) {
+        return Venue.builder()
                 .name(venuDTO.getName())
                 .totalCapacity(venuDTO.getTotalCapacity())
                 .build();
     }
 
-    public VenuDTO toVenuDTO(Venu venu) {
+    public VenuDTO toVenuDTO(Venue venu) {
         return VenuDTO.builder()
                 .id(venu.getId())
                 .name(venu.getName())

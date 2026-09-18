@@ -1,15 +1,13 @@
 package com.example.inventory_service.entity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
+@ToString(exclude = "venue")
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,7 +19,7 @@ public class Event {
     private Long leftCapacity;
 
     @ManyToOne
-    @JoinColumn(name = "venu_id")
-    private Venu venu;
+    @JoinColumn(name = "venue_id")
+    private Venue venue;
 
 }

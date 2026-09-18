@@ -11,7 +11,7 @@ public class EventMapper {
                 .name(eventDTO.getName())
                 .leftCapacity(eventDTO.getLeftCapacity())
                 .totalCapacity(eventDTO.getTotalCapacity())
-                .venu(eventDTO.getVenu())
+                .venue(eventDTO.getVenu())
                 .build();
 
     }
@@ -21,7 +21,7 @@ public class EventMapper {
                 .name(event.getName())
                 .leftCapacity(event.getLeftCapacity())
                 .totalCapacity(event.getTotalCapacity())
-                .venu(event.getVenu())
+                .venu(event.getVenue())
                 .build();
     }
 }

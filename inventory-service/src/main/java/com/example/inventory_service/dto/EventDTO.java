@@ -1,5 +1,5 @@
 package com.example.inventory_service.dto;
-import com.example.inventory_service.entity.Venu;
+import com.example.inventory_service.entity.Venue;
 import lombok.*;
 
 @Data
@@ -11,5 +11,5 @@ public class  EventDTO {
     private String name;
     private Long totalCapacity;
     private Long leftCapacity;
-    private Venu venu;
+    private Venue venu;
 }
