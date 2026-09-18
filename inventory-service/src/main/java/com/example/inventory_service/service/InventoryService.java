@@ -23,6 +23,7 @@ public class InventoryService {
     private final VenuRepository venuRepository;
     private final VenuMapper venuMapper;
     private final EventMapper eventMapper;
+    public List<EventDTO> getAllEvents;
 
     public List<EventDTO> getAllEvents() {
         List<Event> events = eventRepository.findAll();
