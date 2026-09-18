@@ -31,9 +31,7 @@ public class InventoryService {
     }
 
     public VenuDTO getVenueInformation(Long venuId) {
-        System.out.println("venue id =  " + venuId);
         Venue venu = venuRepository.findById(venuId).orElseThrow(() -> new EntityNotFoundException("Venu with id " + venuId + " not found"));
-        System.out.println("venue =  " + venu);
         return venuMapper.toVenuDTO(venu);
     }
 }

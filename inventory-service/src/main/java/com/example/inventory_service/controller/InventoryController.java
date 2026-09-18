@@ -18,7 +18,7 @@ public class InventoryController {
 
     @GetMapping("inventory/events")
     public ResponseEntity<List<EventDTO>> getInventoryEvents() {
-        return ResponseEntity.ok(inventoryService.getAllEvents);
+        return ResponseEntity.ok(inventoryService.getAllEvents());
     }
 
     @GetMapping("inventory/venue/{venuId}")
