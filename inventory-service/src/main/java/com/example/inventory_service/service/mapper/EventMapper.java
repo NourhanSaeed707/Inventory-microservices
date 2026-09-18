@@ -18,6 +18,7 @@ public class EventMapper {
 
     public EventDTO toEventDTO(Event event) {
         return EventDTO.builder()
+                .id(event.getId())
                 .name(event.getName())
                 .leftCapacity(event.getLeftCapacity())
                 .totalCapacity(event.getTotalCapacity())
