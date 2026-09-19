@@ -2,6 +2,8 @@ package com.example.inventory_service.dto;
 import com.example.inventory_service.entity.Venue;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,4 +14,5 @@ public class  EventDTO {
     private Long totalCapacity;
     private Long leftCapacity;
     private Venue venu;
+    private BigDecimal ticketPrice;
 }

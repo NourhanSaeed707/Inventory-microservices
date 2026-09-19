@@ -23,6 +23,7 @@ public class EventMapper {
                 .leftCapacity(event.getLeftCapacity())
                 .totalCapacity(event.getTotalCapacity())
                 .venu(event.getVenue())
+                .ticketPrice(event.getTicketPrice())
                 .build();
     }
 }

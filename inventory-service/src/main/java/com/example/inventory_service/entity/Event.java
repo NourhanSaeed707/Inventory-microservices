@@ -2,6 +2,8 @@ package com.example.inventory_service.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,5 +23,8 @@ public class Event {
     @ManyToOne
     @JoinColumn(name = "venue_id")
     private Venue venue;
+
+    @Column(name = "ticket_price")
+    private BigDecimal ticketPrice;
 
 }
