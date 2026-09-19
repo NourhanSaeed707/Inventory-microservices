@@ -26,4 +26,9 @@ public class InventoryController {
         return ResponseEntity.ok(inventoryService.getVenueInformation(venuId));
     }
 
+    @GetMapping("inventory/event/{eventId}")
+    public ResponseEntity<EventDTO> inventoryForEvent(@PathVariable("eventId") Long eventId) {
+        return ResponseEntity.ok(inventoryService.getEventInventory(eventId));
+    }
+
 }

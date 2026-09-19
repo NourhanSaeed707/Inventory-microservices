@@ -34,4 +34,9 @@ public class InventoryService {
         Venue venu = venuRepository.findById(venuId).orElseThrow(() -> new EntityNotFoundException("Venu with id " + venuId + " not found"));
         return venuMapper.toVenuDTO(venu);
     }
+
+    public EventDTO getEventInventory(Long eventId) {
+        final Event event = eventRepository.findById(eventId).orElseThrow(() -> new EntityNotFoundException("Event with id " + eventId + " not found"));
+        return eventMapper.toEventDTO(event);
+    }
 }
