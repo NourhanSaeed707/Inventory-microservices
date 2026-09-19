@@ -6,4 +6,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class BookingDTO {
+    private Long userId;
+    private Long eventId;
+    private Long ticketCount;
 }
