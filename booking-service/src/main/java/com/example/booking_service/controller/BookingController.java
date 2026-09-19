@@ -1,8 +1,6 @@
 package com.example.booking_service.controller;
 import com.example.booking_service.dto.BookingDTO;
 import com.example.booking_service.service.BookingService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
