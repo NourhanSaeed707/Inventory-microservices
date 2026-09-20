@@ -11,22 +11,22 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/inventory")
 @RequiredArgsConstructor
 public class InventoryController {
     private final InventoryService inventoryService;
 
-    @GetMapping("inventory/events")
+    @GetMapping("/events")
     public ResponseEntity<List<EventDTO>> getInventoryEvents() {
         return ResponseEntity.ok(inventoryService.getAllEvents());
     }
 
-    @GetMapping("inventory/venue/{venuId}")
+    @GetMapping("/venue/{venuId}")
     public ResponseEntity<VenuDTO> inventoryByVenueId(@PathVariable Long venuId) {
         return ResponseEntity.ok(inventoryService.getVenueInformation(venuId));
     }
 
-    @GetMapping("inventory/event/{eventId}")
+    @GetMapping("/event/{eventId}")
     public ResponseEntity<EventDTO> inventoryForEvent(@PathVariable("eventId") Long eventId) {
         return ResponseEntity.ok(inventoryService.getEventInventory(eventId));
     }

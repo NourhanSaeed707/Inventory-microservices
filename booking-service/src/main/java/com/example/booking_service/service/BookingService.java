@@ -1,5 +1,6 @@
 package com.example.booking_service.service;
 
+import com.example.booking_service.client.InventoryServiceClient;
 import com.example.booking_service.dto.BookingDTO;
 import com.example.booking_service.entity.Customer;
 import com.example.booking_service.repository.BookingRepository;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 public class BookingService {
     private final BookingRepository bookingRepository;
     private final CustomerRepository customerRepository;
+    private final InventoryServiceClient  inventoryServiceClient;
 
     public BookingDTO create(BookingDTO bookingDTO) {
         final Customer customer = customerRepository.findById(bookingDTO.getUserId())

@@ -1,9 +1,5 @@
 spring:
   application:
-    name: inventory-service
+    name: discovery-service
   config:
     import: optional:configserver:http://localhost:8888
-
-
-
-
