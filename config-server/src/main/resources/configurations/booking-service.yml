@@ -18,7 +18,7 @@ spring:
 
 server:
   port: 8081
-  
+
 application:
   config:
     inventory-url: http://localhost:8080/api/v1/inventory

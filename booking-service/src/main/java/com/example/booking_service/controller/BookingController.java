@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class BookingController {
     private final BookingService bookingService;
 
-    @PostMapping("/")
+    @PostMapping(path = "/")
     public ResponseEntity<BookingResponse> create(@RequestBody BookingRequest request) {
         return ResponseEntity.ok(bookingService.create(request));
     }

@@ -18,6 +18,6 @@ public class Venue {
     @Column(name = "total_capacity")
     private Long totalCapacity;
 
-    @OneToMany(mappedBy = "venue")
-    List<Event> events;
+//    @OneToMany(mappedBy = "venue")
+//    List<Event> events;
 }

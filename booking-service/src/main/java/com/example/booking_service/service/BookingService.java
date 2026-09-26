@@ -21,6 +21,6 @@ public class BookingService {
                 .orElseThrow(() -> new EntityNotFoundException("user not found wit id "  + request.getUserId()));
         final ResponseEntity<InventoryResponse> inventoryResponse = inventoryClient.inventoryForEvent(request.getEventId());
         System.out.println("inventory: " + inventoryResponse);
-        return null;
+        return BookingResponse.builder().build();
     }
 }

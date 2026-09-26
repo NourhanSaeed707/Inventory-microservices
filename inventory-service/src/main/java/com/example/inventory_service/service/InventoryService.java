@@ -37,6 +37,7 @@ public class InventoryService {
 
     public EventInventoryResponse getEventInventory(Long eventId) {
         final Event event = eventRepository.findById(eventId).orElseThrow(() -> new EntityNotFoundException("Event with id " + eventId + " not found"));
+        System.out.println("event = " + event);
         return eventMapper.toEventInventoryResponse(event);
     }
 }
