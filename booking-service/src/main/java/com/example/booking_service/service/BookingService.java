@@ -19,8 +19,11 @@ public class BookingService {
     public BookingResponse create(BookingRequest request) {
         final Customer customer = customerRepository.findById(request.getUserId())
                 .orElseThrow(() -> new EntityNotFoundException("user not found wit id "  + request.getUserId()));
-        final ResponseEntity<InventoryResponse> inventoryResponse = inventoryClient.inventoryForEvent(request.getEventId());
+        final InventoryResponse inventoryResponse = inventoryClient.inventoryForEvent(request.getEventId());
         System.out.println("inventory: " + inventoryResponse);
+        if(inventoryResponse.getCapacity() < request.getTicketCount()) {
+            throw new RuntimeException("Capacity less than ticket count " + request.getTicketCount());
+        }
         return BookingResponse.builder().build();
     }
 }
