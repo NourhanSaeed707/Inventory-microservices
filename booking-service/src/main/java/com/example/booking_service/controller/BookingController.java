@@ -1,5 +1,4 @@
 package com.example.booking_service.controller;
-import com.example.booking_service.dto.BookingDTO;
 import com.example.booking_service.request.BookingRequest;
 import com.example.booking_service.response.BookingResponse;
 import com.example.booking_service.service.BookingService;

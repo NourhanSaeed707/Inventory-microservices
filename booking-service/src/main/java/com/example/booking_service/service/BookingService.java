@@ -1,10 +1,6 @@
 package com.example.booking_service.service;
 import com.example.booking_service.client.InventoryClient;
-import com.example.booking_service.dto.BookingDTO;
-import com.example.booking_service.dto.EventDTO;
-import com.example.booking_service.dto.InventoryDTO;
 import com.example.booking_service.entity.Customer;
-import com.example.booking_service.repository.BookingRepository;
 import com.example.booking_service.repository.CustomerRepository;
 import com.example.booking_service.request.BookingRequest;
 import com.example.booking_service.response.BookingResponse;
@@ -17,7 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class BookingService {
-    private final BookingRepository bookingRepository;
     private final CustomerRepository customerRepository;
     private final InventoryClient inventoryClient;
 
