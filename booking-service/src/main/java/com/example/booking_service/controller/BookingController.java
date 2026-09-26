@@ -1,5 +1,6 @@
 package com.example.booking_service.controller;
 import com.example.booking_service.dto.BookingDTO;
+import com.example.booking_service.request.BookingRequest;
 import com.example.booking_service.service.BookingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ public class BookingController {
     private final BookingService bookingService;
 
     @PostMapping("/")
-    public ResponseEntity<BookingDTO> create(@RequestBody BookingDTO bookingDTO) {
-        return ResponseEntity.ok(bookingService.create(bookingDTO));
+    public ResponseEntity<BookingResponse> create(@RequestBody BookingRequest request) {
+        return ResponseEntity.ok(bookingService.create(request));
     }
 }
