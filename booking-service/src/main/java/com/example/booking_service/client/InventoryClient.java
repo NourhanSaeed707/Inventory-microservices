@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "inventory-service", url = "${application.config.inventory-url}")
 public interface InventoryClient {
-    @GetMapping("/event/${eventId}")
+    @GetMapping("/event/{eventId}")
     ResponseEntity<InventoryResponse> inventoryForEvent(@PathVariable("eventId") Long eventId);
 }
