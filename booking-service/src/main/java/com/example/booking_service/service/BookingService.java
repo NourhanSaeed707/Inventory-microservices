@@ -8,6 +8,7 @@ import com.example.booking_service.repository.BookingRepository;
 import com.example.booking_service.repository.CustomerRepository;
 import com.example.booking_service.request.BookingRequest;
 import com.example.booking_service.response.BookingResponse;
+import com.example.booking_service.response.InventoryResponse;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,7 @@ public class BookingService {
     public BookingResponse create(BookingRequest request) {
         final Customer customer = customerRepository.findById(request.getUserId())
                 .orElseThrow(() -> new EntityNotFoundException("user not found wit id "  + request.getUserId()));
-        final ResponseEntity<EventDTO> inventoryResponse = inventoryClient.inventoryForEvent(request.getEventId());
+        final ResponseEntity<InventoryResponse> inventoryResponse = inventoryClient.inventoryForEvent(request.getEventId());
         System.out.println("inventory: " + inventoryResponse);
         return null;
     }

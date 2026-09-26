@@ -15,9 +15,9 @@ public class VenuMapper {
     }
 
     public VenueInventoryResponse toVenueInventoryResponse(Venue venu) {
-        return VenuDTO.builder()
-                .id(venu.getId())
-                .name(venu.getName())
+        return VenueInventoryResponse.builder()
+                .venueId(venu.getId())
+                .venueName(venu.getName())
                 .totalCapacity(venu.getTotalCapacity())
                 .build();
     }

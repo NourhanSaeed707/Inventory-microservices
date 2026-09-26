@@ -18,12 +18,11 @@ public class EventMapper {
     }
 
     public EventInventoryResponse toEventInventoryResponse(Event event) {
-        return EventDTO.builder()
-                .id(event.getId())
-                .name(event.getName())
-                .leftCapacity(event.getLeftCapacity())
-                .totalCapacity(event.getTotalCapacity())
-                .venu(event.getVenue())
+        return EventInventoryResponse.builder()
+                .eventId(event.getId())
+                .event(event.getName())
+                .capacity(event.getLeftCapacity())
+                .venue(event.getVenue())
                 .ticketPrice(event.getTicketPrice())
                 .build();
     }
