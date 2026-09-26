@@ -1,6 +1,7 @@
 package com.example.inventory_service.service.mapper;
 import com.example.inventory_service.dto.EventDTO;
 import com.example.inventory_service.entity.Event;
+import com.example.inventory_service.response.EventInventoryResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,7 +17,7 @@ public class EventMapper {
 
     }
 
-    public EventDTO toEventDTO(Event event) {
+    public EventInventoryResponse toEventInventoryResponse(Event event) {
         return EventDTO.builder()
                 .id(event.getId())
                 .name(event.getName())
