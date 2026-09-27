@@ -3,10 +3,11 @@ spring:
     name: booking-service
   config:
     import: optional:configserver:http://localhost:8888
+
   kafka:
     bootstrap-servers: localhost:9092
     template:
       default-topic: booking
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serialize: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
