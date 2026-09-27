@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: order-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      default-topic: booking
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

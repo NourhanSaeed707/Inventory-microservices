@@ -1,5 +1,4 @@
 package com.example.booking_service.client;
-import com.example.booking_service.dto.EventDTO;
 import com.example.booking_service.response.InventoryResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;

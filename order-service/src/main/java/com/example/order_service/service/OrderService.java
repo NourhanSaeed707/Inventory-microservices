@@ -20,6 +20,7 @@ public class OrderService {
         Order order = createOrder(bookingEvent);
         orderRepository.saveAndFlush(order);
         // Update Inventory
+        inventoryServiceClient.updateInventor(order.getEventId(), order.getTicketCount());
 
     }
 
