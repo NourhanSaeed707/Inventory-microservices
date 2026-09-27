@@ -33,7 +33,7 @@ public class BookingService {
             throw  new RuntimeException("Capacity less than ticket count");
         }
         final BookingEvent bookingEvent = createBookingEvent(request, customer, inventory);
-        kafkaTemplate.send("booking_event", bookingEvent);
+        kafkaTemplate.send("booking", bookingEvent);
         log.info("Booking sent to Kafka: ", bookingEvent);
         return BookingResponse.builder()
                 .userId(customer.getId())
