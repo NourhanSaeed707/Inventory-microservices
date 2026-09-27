@@ -10,11 +10,13 @@ import com.example.inventory_service.service.mapper.EventMapper;
 import com.example.inventory_service.service.mapper.VenuMapper;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class InventoryService {
 
     private final EventRepository eventRepository;
@@ -37,5 +39,12 @@ public class InventoryService {
     public EventInventoryResponse getEventInventory(Long eventId) {
         final Event event = eventRepository.findById(eventId).orElseThrow(() -> new EntityNotFoundException("Event with id " + eventId + " not found"));
         return eventMapper.toEventInventoryResponse(event);
+    }
+
+    public void updateEventCapacity(final Long eventId,final Long ticketsBooked) {
+        final Event event = eventRepository.findById(eventId).orElseThrow(() -> new EntityNotFoundException("Event with id " + eventId + " not found"));
+        event.setLeftCapacity(event.getLeftCapacity() - ticketsBooked);
+        eventRepository.saveAndFlush(event);
+        log.info("Updated event capacity for event id {}  with tickets booked {}", eventId, ticketsBooked);
     }
 }
