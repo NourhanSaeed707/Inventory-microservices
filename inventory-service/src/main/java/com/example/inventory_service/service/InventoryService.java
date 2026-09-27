@@ -1,6 +1,5 @@
 package com.example.inventory_service.service;
 import com.example.inventory_service.dto.EventDTO;
-import com.example.inventory_service.dto.VenuDTO;
 import com.example.inventory_service.entity.Event;
 import com.example.inventory_service.entity.Venue;
 import com.example.inventory_service.repository.EventRepository;

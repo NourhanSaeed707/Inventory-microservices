@@ -34,7 +34,7 @@ public class BookingService {
         }
         final BookingEvent bookingEvent = createBookingEvent(request, customer, inventory);
         kafkaTemplate.send("booking", bookingEvent);
-        log.info("Booking sent to Kafka: ", bookingEvent);
+        log.info("Booking sent to Kafka: {}", bookingEvent);
         return BookingResponse.builder()
                 .userId(customer.getId())
                 .eventId(bookingEvent.getEventId())
