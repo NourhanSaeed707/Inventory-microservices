@@ -15,12 +15,12 @@ spring:
         - id: inventory
           uri: http://localhost:8080
           predicates:
-            - Path:/api/v1/inventory
+            - Path: /api/v1/inventory/**
         - id: booking
           uri: http://localhost:8081
           predicates:
-           - Path: /api/v1/booking
+           - Path: /api/v1/booking/**
         - id: order
           uri: http://localhost:8082
           predicates:
-            - Path: /api/v1/order
+            - Path: /api/v1/order/**
