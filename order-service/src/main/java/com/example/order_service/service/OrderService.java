@@ -23,7 +23,7 @@ public class OrderService {
         orderRepository.saveAndFlush(order);
         // Update Inventory
         inventoryServiceClient.updateEventCapacity(order.getEventId(), order.getTicketCount());
-        log.info("Inventory updated for event{}:, less tickets: {}", order.getEventId(), order.getTicketCount());
+        log.info("Inventory updated for eventInventory updated for event{}:, less tickets: {}", order.getEventId(), order.getTicketCount());
 
     }
 
