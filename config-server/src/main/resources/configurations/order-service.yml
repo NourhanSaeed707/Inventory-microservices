@@ -16,11 +16,10 @@ spring:
       group-id: order-service
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
       properties:
-        spring:
-          json:
-            type:
-              mapping: bookingEvent:com.example.leetjourney.bookingservice.event.BookingEvent
+        spring.json.trusted.packages: "com.example.booking_service.event"
+        spring.json.type.mapping: "bookingEvent:com.example.booking_service.event.BookingEvent"
 
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect

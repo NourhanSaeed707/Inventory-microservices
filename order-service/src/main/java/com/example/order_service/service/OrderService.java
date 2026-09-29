@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class OrderService {
-    private OrderRepository orderRepository;
-    private InventoryServiceClient inventoryServiceClient;
+    private final OrderRepository orderRepository;
+    private final InventoryServiceClient inventoryServiceClient;
 
     @KafkaListener(topics = "booking", groupId = "order-service")
     public void orderEvent(BookingEvent bookingEvent) {
