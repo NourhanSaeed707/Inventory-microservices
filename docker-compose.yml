@@ -30,7 +30,7 @@ services:
     container_name: kafka-broker
     ports:
       - "9092:9092"
-      - "9092:9092"
+      - "29092:29092"
     depends_on:
       - zookeeper
     environment:
