@@ -340,11 +340,13 @@ The project uses **Swagger / OpenAPI** to document and test the REST APIs.
 
 ## Booking Service Swagger
 
-![Booking Service Swagger](./screenshots/booking-swagger.png)
+<img width="1876" height="960" alt="booking-swagger" src="https://github.com/user-attachments/assets/859fc72b-3294-4807-965e-7dd3bae2bb58" />
+
 
 ## Inventory Service Swagger
 
-![Inventory Service Swagger](./screenshots/inventory-swagger.png)
+<img width="1860" height="960" alt="inventory-swagger" src="https://github.com/user-attachments/assets/1c4a1b0b-13da-4056-8558-f3a837df0042" />
+
 
 The Swagger UI provides an interactive interface for:
 
@@ -460,7 +462,6 @@ This project was built to demonstrate practical experience with:
 
 Backend-focused Full-Stack Developer | Java & Spring Boot
 
-<img width="1860" height="960" alt="inventory-swagger" src="https://github.com/user-attachments/assets/52a432fb-c013-45b4-9ba3-2cf3c157f33f" />
 
 <img width="1876" height="960" alt="booking-swagger" src="https://github.com/user-attachments/assets/819a711a-80eb-481e-9c05-daab9ca917a8" />
 
