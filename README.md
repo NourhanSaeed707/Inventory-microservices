@@ -455,14 +455,3 @@ This project was built to demonstrate practical experience with:
 * Containerized development
 * REST API design
 * Distributed system configuration
-
-# Author
-
-**Nourhan Saeed**
-
-Backend-focused Full-Stack Developer | Java & Spring Boot
-
-
-<img width="1876" height="960" alt="booking-swagger" src="https://github.com/user-attachments/assets/819a711a-80eb-481e-9c05-daab9ca917a8" />
-
-
