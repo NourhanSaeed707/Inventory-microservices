@@ -459,3 +459,9 @@ This project was built to demonstrate practical experience with:
 **Nourhan Saeed**
 
 Backend-focused Full-Stack Developer | Java & Spring Boot
+
+<img width="1860" height="960" alt="inventory-swagger" src="https://github.com/user-attachments/assets/52a432fb-c013-45b4-9ba3-2cf3c157f33f" />
+
+<img width="1876" height="960" alt="booking-swagger" src="https://github.com/user-attachments/assets/819a711a-80eb-481e-9c05-daab9ca917a8" />
+
+
